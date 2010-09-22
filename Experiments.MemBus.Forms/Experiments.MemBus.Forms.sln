@@ -3,6 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Experiments.MemBus.Forms", "Experiments.MemBus.Forms\Experiments.MemBus.Forms.csproj", "{AE1F8AD0-04B9-453F-81A6-47C233A61ED3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External Libraries", "External Libraries", "{64403566-2CB5-4308-AFB2-F78BBCED48DF}"
+	ProjectSection(SolutionItems) = preProject
+		External Libraries\MemBus.dll = External Libraries\MemBus.dll
+		External Libraries\Microsoft.Practices.ServiceLocation.dll = External Libraries\Microsoft.Practices.ServiceLocation.dll
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
