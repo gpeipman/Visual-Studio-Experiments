@@ -35,13 +35,16 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.ExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LocationTimer = new System.Windows.Forms.Timer(this.components);
+            this.windowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TileHorizontalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
+            this.fileToolStripMenuItem,
+            this.windowToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(555, 24);
@@ -82,6 +85,21 @@
             this.LocationTimer.Interval = 3000;
             this.LocationTimer.Tick += new System.EventHandler(this.LocationTimerTick);
             // 
+            // windowToolStripMenuItem
+            // 
+            this.windowToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TileHorizontalToolStripMenuItem});
+            this.windowToolStripMenuItem.Name = "windowToolStripMenuItem";
+            this.windowToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.windowToolStripMenuItem.Text = "&Window";
+            // 
+            // TileHorizontalToolStripMenuItem
+            // 
+            this.TileHorizontalToolStripMenuItem.Name = "TileHorizontalToolStripMenuItem";
+            this.TileHorizontalToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.TileHorizontalToolStripMenuItem.Text = "Tile &horizontal";
+            this.TileHorizontalToolStripMenuItem.Click += new System.EventHandler(this.TileHorizontalToolStripMenuItemClick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -107,6 +125,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem ExitToolStripMenuItem;
         private System.Windows.Forms.Timer LocationTimer;
+        private System.Windows.Forms.ToolStripMenuItem windowToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TileHorizontalToolStripMenuItem;
     }
 }
 
