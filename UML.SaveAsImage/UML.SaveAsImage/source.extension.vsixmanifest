@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="UML.SaveAsImage..9c112393-11a8-484e-9b5e-2efb20a511d7">
+    <Name>UML.SaveAsImage Context Menu</Name>
+    <Author>Gunnar Peipman</Author>
+    <Version>1.0</Version>
+    <Description xml:space="preserve">Adds save as image context menu to UML diagrams of Visual Studio 2010 modeling packs. Credits are shared with Cameron Skinner).</Description>
+    <Locale>1033</Locale>
+    <Icon>Command_small.png</Icon>
+    <PreviewImage>Command_large.png</PreviewImage>
+    <SupportedProducts>
+      <VisualStudio Version="10.0">
+        <Edition>Ultimate</Edition>
+        <Edition>Premium</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
+  </Identifier>
+  <References>
+    <Reference Id="VisualStudio.FeaturePack.Runtime.6077f06b-77df-4c5e-975a-97eb5b6e26b5">
+      <Name>Visual Studio Feature Pack June 2010 Runtime</Name>
+      <MoreInfoUrl>http://go.microsoft.com/fwlink/?LinkId=191344</MoreInfoUrl>
+    </Reference>
+  </References>
+  <Content>
+    <MefComponent>|%CurrentProject%|</MefComponent>
+  </Content>
+</Vsix>
