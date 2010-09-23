@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 using MemBus;
 using MemBus.Configurators;
@@ -23,6 +24,13 @@ namespace Experiments.MemBus.Forms
             Close();
         }
 
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+
+            LocationTimer.Start();
+        }
+
         protected override void OnClosed(EventArgs e)
         {
             base.OnClosed(e);
@@ -35,6 +43,21 @@ namespace Experiments.MemBus.Forms
             var child = new ChildForm {MdiParent = this};
             _observable.Subscribe(child);
             child.Show();
+        }
+
+        private void LocationTimerTick(object sender, EventArgs e)
+        {
+            var item = new GeoLocationItem();
+            item.Time = DateTime.Now;
+
+            var secondString = item.Time.Second.ToString();
+            item.Title = "Car " + secondString[secondString.Length - 1];
+            item.Longitude = item.Time.Second;
+            item.Latitude = item.Time.Millisecond;
+
+            Debug.WriteLine("Publishing item: " + item.Title);
+
+            _bus.Publish(item);
         }
     }
 }

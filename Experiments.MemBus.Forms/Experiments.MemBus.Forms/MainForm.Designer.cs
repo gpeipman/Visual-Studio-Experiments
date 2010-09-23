@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.NewWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.ExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.LocationTimer = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,21 +61,26 @@
             // NewWindowToolStripMenuItem
             // 
             this.NewWindowToolStripMenuItem.Name = "NewWindowToolStripMenuItem";
-            this.NewWindowToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.NewWindowToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.NewWindowToolStripMenuItem.Text = "&New window";
             this.NewWindowToolStripMenuItem.Click += new System.EventHandler(this.NewWindowToolStripMenuItemClick);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(140, 6);
             // 
             // ExitToolStripMenuItem
             // 
             this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
-            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.ExitToolStripMenuItem.Text = "&Exit";
             this.ExitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItemClick);
+            // 
+            // LocationTimer
+            // 
+            this.LocationTimer.Interval = 3000;
+            this.LocationTimer.Tick += new System.EventHandler(this.LocationTimerTick);
             // 
             // MainForm
             // 
@@ -99,6 +106,7 @@
         private System.Windows.Forms.ToolStripMenuItem NewWindowToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem ExitToolStripMenuItem;
+        private System.Windows.Forms.Timer LocationTimer;
     }
 }
 
