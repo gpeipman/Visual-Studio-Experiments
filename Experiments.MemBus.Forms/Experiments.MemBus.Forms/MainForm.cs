@@ -15,9 +15,8 @@ namespace Experiments.MemBus.Forms
             InitializeComponent();
 
             _bus = BusSetup.StartWith<Fast>().Construct();
-            _bus.Observe<GeoLocationItem>();
         }
-
+        
         private void ExitToolStripMenuItemClick(object sender, EventArgs e)
         {
             Close();
@@ -53,8 +52,10 @@ namespace Experiments.MemBus.Forms
         {
             var form = (Form)sender;
             var observable = form.Tag as IObservable<GeoLocationItem>;
-            if(observable != null)
+            if (observable != null)
+            {
                 observable.Subscribe(null);
+            }
         }
 
         private void LocationTimerTick(object sender, EventArgs e)

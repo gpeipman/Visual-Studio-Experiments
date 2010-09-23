@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="DelayedHello.asmx.cs" Class="RemoteWebService.DelayedHello" %>

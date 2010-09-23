@@ -42,7 +42,7 @@ namespace Experiments.MemBus.Forms
 
         public void OnCompleted()
         {
-            throw new NotImplementedException();
+            
         }
     }
 }
