@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="8ba58e8f-fa23-4917-832d-35cc981e98aa"
+  name="Experiments.MemBus.Forms.Models" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <component
+        Id="b6fde3e4-1655-40b9-800d-5a3b8ae794ad"
+        name="EventReceuver"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="92df95d2-05e1-446e-b544-b2b9fa3104f0"
+        name="Application"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="13767adb-d47d-4279-b917-666f8941d98e"
+        name="Bus"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="eb220dde-5384-4271-93c2-1bb8a4c432ec"
+            isDerived="false"
+            sourceEndRoleName="Bus"
+            targetEndRoleName="IObserver"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="2d2f10b2-4670-4741-b24a-68d472f9b27f"
+              LastKnownName="IObserver"
+              LastKnownLocation="Experiments.MemBus.Forms.Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f1224f16-acbb-4dcb-aadb-c3fcc299f070"
+                  name="Bus"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e364ed18-185d-4043-af01-d68881528e78"
+                  name="IObserver"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="e43cb1a8-577e-4b25-8433-38f4cbf26e46"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="ed3dd727-3dc1-47fc-afda-8d8090ccb421"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6fa19e99-798e-4241-bde3-3eb148a335ab"
+        name="EventReceiver"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="91e74cb8-e5b0-4f40-b317-042d977afc00"
+        name="MdiParent"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="14e2edb5-200b-4029-afc1-93368adfd9b0"
+            isDerived="false"
+            sourceEndRoleName="MdiParent"
+            targetEndRoleName="MdiChild_1"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="5d72c153-67a9-418e-a0ff-9b4d6fcf230c"
+              LastKnownName="MdiChild_1"
+              LastKnownLocation="Experiments.MemBus.Forms.Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9f490c4c-c8b9-46e8-9b56-baeabcaee0cc"
+                  name="MdiParent"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6c52cfa8-1bad-49ff-b14f-1da307814a56"
+                  name="MdiChild_1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="e7ed5152-c31e-4166-91bd-a6599574979d"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="968b457e-2890-44f8-a905-b1ed4933bb22"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="82bfba99-b74e-4165-b3b7-4606223a36a4"
+            isDerived="false"
+            sourceEndRoleName="MdiParent"
+            targetEndRoleName="MdiChild_N"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="989fd533-bd1e-4156-9d67-da2674651616"
+              LastKnownName="MdiChild_N"
+              LastKnownLocation="Experiments.MemBus.Forms.Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="afd28c5b-602a-41b5-8d07-fe528d582a6a"
+                  name="MdiParent"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1300a7e2-1356-4dac-a66a-9d951ac4827a"
+                  name="MdiChild_N"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="80733767-d197-47b8-9ab5-bde06d042159"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="dd2618e2-1343-4d6c-b4f6-7cb9a2f053ef"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d7cff7b0-30d1-45e5-8248-57abef1a2294"
+            isDerived="false"
+            sourceEndRoleName="MdiParent"
+            targetEndRoleName="EventReceiver"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="6fa19e99-798e-4241-bde3-3eb148a335ab"
+              LastKnownName="EventReceiver"
+              LastKnownLocation="Experiments.MemBus.Forms.Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1e2546fb-a65a-42f1-8c4e-dae84bc595d9"
+                  name="MdiParent"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9d6fb9ce-a405-47c2-a88d-eb8dc75d95f4"
+                  name="EventReceiver"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d6d36be6-cb92-429e-81e0-b57c3708b760"
+            isDerived="false"
+            sourceEndRoleName="MdiParent"
+            targetEndRoleName="Bus"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="13767adb-d47d-4279-b917-666f8941d98e"
+              LastKnownName="Bus"
+              LastKnownLocation="Experiments.MemBus.Forms.Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9e762030-4ced-4e58-847d-31579a939ea0"
+                  name="MdiParent"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="faf674cc-ebcf-4098-a064-73d5f2094579"
+                  name="Bus"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5d72c153-67a9-418e-a0ff-9b4d6fcf230c"
+        name="MdiChild_1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="918da85c-de7c-4747-9324-889fb2275bdc">
+            <interfaceMoniker
+              Id="2d2f10b2-4670-4741-b24a-68d472f9b27f"
+              LastKnownName="IObserver"
+              LastKnownLocation="Experiments.MemBus.Forms.Models.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="989fd533-bd1e-4156-9d67-da2674651616"
+        name="MdiChild_N"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="2d2f10b2-4670-4741-b24a-68d472f9b27f"
+        name="IObserver"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
