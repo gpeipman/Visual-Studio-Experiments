@@ -1,7 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Experiments.MemoryMappedFiles.Client", "Experiments.MemoryMappedFiles.Client\Experiments.MemoryMappedFiles.Client.csproj", "{057D2DBF-40DC-4665-9AFC-5616598C8D36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Experiments.MemoryMappedFiles.Server", "Experiments.MemoryMappedFiles.Server\Experiments.MemoryMappedFiles.Server.csproj", "{B773B597-6010-42C9-9C84-52343122DF7A}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{057D2DBF-40DC-4665-9AFC-5616598C8D36}.Debug|x86.ActiveCfg = Debug|x86
+		{057D2DBF-40DC-4665-9AFC-5616598C8D36}.Debug|x86.Build.0 = Debug|x86
+		{057D2DBF-40DC-4665-9AFC-5616598C8D36}.Release|x86.ActiveCfg = Release|x86
+		{057D2DBF-40DC-4665-9AFC-5616598C8D36}.Release|x86.Build.0 = Release|x86
+		{B773B597-6010-42C9-9C84-52343122DF7A}.Debug|x86.ActiveCfg = Debug|x86
+		{B773B597-6010-42C9-9C84-52343122DF7A}.Debug|x86.Build.0 = Debug|x86
+		{B773B597-6010-42C9-9C84-52343122DF7A}.Release|x86.ActiveCfg = Release|x86
+		{B773B597-6010-42C9-9C84-52343122DF7A}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

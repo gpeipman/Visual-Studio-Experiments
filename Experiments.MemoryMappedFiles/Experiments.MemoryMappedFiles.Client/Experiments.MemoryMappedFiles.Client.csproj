@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>99aebb16-721d-413f-bafc-6ee0ae5b80c4</ProjectGuid>
+    <ProjectGuid>{057D2DBF-40DC-4665-9AFC-5616598C8D36}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Experiments.MemoryMappedFiles.Client</RootNamespace>
