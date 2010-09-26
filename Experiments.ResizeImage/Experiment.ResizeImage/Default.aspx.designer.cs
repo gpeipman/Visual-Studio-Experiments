@@ -22,12 +22,21 @@ namespace Experiments.ResizeImage {
         protected global::System.Web.UI.WebControls.Label ErrorLabel;
         
         /// <summary>
-        /// CreateThumbnailButton control.
+        /// CreateScaleThumbnailButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button CreateThumbnailButton;
+        protected global::System.Web.UI.WebControls.Button CreateScaleThumbnailButton;
+        
+        /// <summary>
+        /// CreateSquareThumbnailButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button CreateSquareThumbnailButton;
     }
 }

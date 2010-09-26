@@ -9,6 +9,12 @@
     </h2>
     <asp:Label runat="server" ID="ErrorLabel"></asp:Label>
     <p>
-        <asp:Button runat="server" ID="CreateThumbnailButton" Text="Create thumbnail" OnClick="CreateThumbnailButtonClick" />
-    </p>    
+        <asp:Button runat="server" ID="CreateScaleThumbnailButton" Text="Create thumbnail" OnClick="CreateScaleThumbnailButtonClick" />
+    </p>
+    <h2>
+        Resize image, square a = 100px
+    </h2>
+    <p>
+        <asp:Button runat="server" ID="CreateSquareThumbnailButton" Text="Create thumbnail" OnClick="CreateSquareThumbnailButtonClick" />
+    </p>
 </asp:Content>
