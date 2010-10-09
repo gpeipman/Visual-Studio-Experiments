@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Helpers;
+﻿using System.Web.Helpers;
 using System.Web.Mvc;
 using Experiments.AspNetMvc3NewFeatures.Razor.Models;
 
@@ -26,8 +22,13 @@ namespace Experiments.AspNetMvc3NewFeatures.Razor.Controllers
         {
             var model = new ChartModel();
             var data = model.GetChartData();
-            
-            return View(data);
+
+            new Chart(400, 200, ChartTheme.Blue)
+                .AddTitle("Price enquiries")
+                .DataBindTable(data, "X")
+                .Write("png");
+
+            return null;
         }
     }
 }
