@@ -1,0 +1,14 @@
+﻿@model dynamic
+
+@{
+	View.Title = "Chart";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+	<h2>Chart</h2>
+
+	@{
+		var key = new Chart(400, 200, ChartTheme.Blue)
+					.DataBindTable(Model)
+					.Write("png");
+	}
