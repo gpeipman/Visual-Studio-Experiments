@@ -1,4 +1,5 @@
-﻿using System.Web.Helpers;
+﻿using System;
+using System.Web.Helpers;
 using System.Web.Mvc;
 using Experiments.AspNetMvc3NewFeatures.Razor.Models;
 
@@ -18,7 +19,7 @@ namespace Experiments.AspNetMvc3NewFeatures.Razor.Controllers
             return View();
         }
 
-        public ActionResult Chart()
+        public ActionResult MyChart()
         {
             var model = new ChartModel();
             var data = model.GetChartData();
@@ -28,6 +29,26 @@ namespace Experiments.AspNetMvc3NewFeatures.Razor.Controllers
                 .DataBindTable(data, "X")
                 .Write("png");
 
+            return null;
+        }
+
+        public ActionResult MyCachedChart()
+        {
+            const string chartKey = "MyCachedChart";
+            var chart = Chart.GetFromCache(chartKey);
+
+            if (chart == null)
+            {
+                var model = new ChartModel();
+                var data = model.GetChartData();
+
+                chart = new Chart(400, 200, ChartTheme.Blue)
+                        .AddTitle("Chart cached: " + DateTime.Now)
+                        .DataBindTable(data, "X");
+                chart.SaveToCache(chartKey,1,false);
+            }
+
+            chart.Write("png");
             return null;
         }
     }
