@@ -19,7 +19,7 @@ namespace Experiments.AspNetMvc3NewFeatures.Razor.Controllers
             return View();
         }
 
-        public ActionResult MyChart()
+        public void MyChart()
         {
             var model = new ChartModel();
             var data = model.GetChartData();
@@ -28,11 +28,9 @@ namespace Experiments.AspNetMvc3NewFeatures.Razor.Controllers
                 .AddTitle("Price enquiries")
                 .DataBindTable(data, "X")
                 .Write("png");
-
-            return null;
         }
 
-        public ActionResult MyCachedChart()
+        public void MyCachedChart()
         {
             const string chartKey = "MyCachedChart";
             var chart = Chart.GetFromCache(chartKey);
@@ -49,7 +47,6 @@ namespace Experiments.AspNetMvc3NewFeatures.Razor.Controllers
             }
 
             chart.Write("png");
-            return null;
         }
     }
 }
