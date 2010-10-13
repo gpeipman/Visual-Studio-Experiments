@@ -16,7 +16,10 @@ namespace Experiments.AspNetMvc3NewFeatures.Razor.Controllers
 
         public ActionResult About()
         {
-            return View();
+            var model = new ContentPagesModel();
+            var page = model.GetAboutPage();
+
+            return View(page);
         }
 
         public void MyChart()

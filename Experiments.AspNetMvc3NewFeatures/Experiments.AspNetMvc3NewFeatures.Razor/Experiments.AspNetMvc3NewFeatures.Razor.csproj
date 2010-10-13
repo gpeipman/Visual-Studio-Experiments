@@ -62,6 +62,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ChartModel.cs" />
+    <Compile Include="Models\ContentPage.cs" />
+    <Compile Include="Models\ContentPagesModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

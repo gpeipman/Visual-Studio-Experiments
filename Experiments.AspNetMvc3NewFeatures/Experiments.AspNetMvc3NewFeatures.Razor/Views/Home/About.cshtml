@@ -1,8 +1,10 @@
-﻿@{
-    View.Title = "About Us";
+﻿@model Experiments.AspNetMvc3NewFeatures.Razor.Models.ContentPage
+@{
+    View.Title = Model.Title;
 }
 
-<h2>About</h2>
+
+<h2>@Model.Title</h2>
 <p>
-     Put content here.
+     @Model.Description
 </p>
