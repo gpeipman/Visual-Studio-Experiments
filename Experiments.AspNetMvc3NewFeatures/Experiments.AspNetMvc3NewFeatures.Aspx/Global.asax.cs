@@ -31,6 +31,8 @@ namespace Experiments.AspNetMvc3NewFeatures.Aspx
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+
+            ControllerBuilder.Current.SetControllerFactory(typeof (MyControllerFactory));
         }
     }
 }
