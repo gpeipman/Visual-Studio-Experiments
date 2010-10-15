@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="ChartResult.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ImageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -68,6 +69,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="images\bunny-peanuts.jpg" />
+    <Content Include="images\watermark.png" />
+    <Content Include="Views\Image\Cropped.aspx" />
+    <Content Include="Views\Image\HorizontalFlip.aspx" />
+    <Content Include="Views\Image\ImageWatermark.aspx" />
+    <Content Include="Views\Image\Index.aspx" />
+    <Content Include="Views\Image\Resized.aspx" />
+    <Content Include="Views\Image\RotateLeft.aspx" />
+    <Content Include="Views\Image\RotateRight.aspx" />
+    <Content Include="Views\Image\TextWatermark.aspx" />
+    <Content Include="Views\Image\VerticalFlip.aspx" />
+    <Content Include="Views\Shared\ImagesMenu.ascx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

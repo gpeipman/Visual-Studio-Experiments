@@ -11,13 +11,16 @@ namespace Experiments.AspNetMvc3NewFeatures.Aspx
         {
             IController controller = null;
 
+            if (controllerName == "favicon.ico")
+                return null;
+
             if (controllerName == "Home")
             {
                 controller = new HomeController(new ChartModel());
             }
             else
             {
-                var controllerType = controllerName + "Controller";
+                var controllerType = "Experiments.AspNetMvc3NewFeatures.Aspx.Controllers." + controllerName + "Controller";
                 controller = Activator.CreateInstance(Type.GetType(controllerType)) as IController; 
             }
 
