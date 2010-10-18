@@ -34,7 +34,7 @@ namespace Experiments.AspNetMvc3NewFeatures.Aspx.Controllers
         public void GetCropped()
         {
             new WebImage(ImagePath)
-                .Crop(50, 50, 50, 50)
+                .Crop(50, 50, 50, 50) // crop 50px from all sides
                 .Write();
         }
 
@@ -70,7 +70,7 @@ namespace Experiments.AspNetMvc3NewFeatures.Aspx.Controllers
         public void GetResized()
         {
             new WebImage(ImagePath)
-                .Resize(200, 200)
+                .Resize(200, 200) // resize image to 200x200 px
                 .Write();
         }
 
