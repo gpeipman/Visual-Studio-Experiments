@@ -1,0 +1,28 @@
+﻿@model dynamic
+
+@{
+	View.Title = "Feedback";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+	<h2>Feedback</h2>
+
+	<p>@Html.ValidationMessage("_FORM")</p>
+
+	@using(Html.BeginForm()) {
+		<table>
+		<tr>
+			<td>Your e-mail:</td>
+			<td>@Html.TextBox("email")</td>
+		</tr>
+		<tr>
+			<td>Subject:</td>
+			<td>@Html.TextBox("subject")</td>
+		</tr>
+		<tr>
+			<td>Body:</td>
+			<td>@Html.TextArea("body")</td>
+		</tr>
+		</table>
+		<input type="submit" value="Send" />
+	}

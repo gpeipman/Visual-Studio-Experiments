@@ -51,5 +51,39 @@ namespace Experiments.AspNetMvc3NewFeatures.Razor.Controllers
 
             chart.Write("png");
         }
+
+        [HttpGet]
+        public ActionResult Feedback()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Feedback(string email, string subject, string body)
+        {            
+            try
+            {
+                WebMail.SmtpServer = "gprsmail.emt.ee";
+                WebMail.Send(
+                        "gpeipman@hotmail.com",
+                        subject,
+                        body,
+                        email
+                    );
+
+                return RedirectToAction("FeedbackSent");
+            }
+            catch (Exception ex)
+            {
+                ViewData.ModelState.AddModelError("_FORM", ex.ToString());
+            }
+
+            return View();
+        }
+
+        public ActionResult FeedbackSent()
+        {
+            return View();
+        }
     }
 }
