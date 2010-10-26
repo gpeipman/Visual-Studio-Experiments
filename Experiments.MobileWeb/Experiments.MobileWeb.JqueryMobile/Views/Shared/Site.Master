@@ -1,0 +1,24 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+	<title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.css" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.js"></script>
+</head>
+
+<body>
+<div data-role="page">
+	<div data-role="header">
+		<h1><asp:ContentPlaceHolder ID="PageTitleContent" runat="server" /></h1>
+	</div>
+	<div data-role="content">
+		<asp:ContentPlaceHolder ID="MainContent" runat="server" />
+	</div>
+	<div data-role="footer" class="ui-bar">
+		<%: Html.ActionLink("About", "About", "Home")  %>
+	</div>
+</div>
+</body>
+</html>
