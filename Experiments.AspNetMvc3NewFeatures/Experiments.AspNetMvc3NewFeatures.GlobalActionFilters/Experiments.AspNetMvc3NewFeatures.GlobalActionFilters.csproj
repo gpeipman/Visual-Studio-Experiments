@@ -6,12 +6,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{82DB9438-D81E-4EB4-B5EB-B8B5E02405A4}</ProjectGuid>
+    <ProjectGuid>{C8FCFB93-99F3-4EC0-AAA0-584322F40D21}</ProjectGuid>
     <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Experiments.AspNetMvc3NewFeatures.Aspx</RootNamespace>
-    <AssemblyName>Experiments.AspNetMvc3NewFeatures.Aspx</AssemblyName>
+    <RootNamespace>Experiments.AspNetMvc3NewFeatures.GlobalActionFilters</RootNamespace>
+    <AssemblyName>Experiments.AspNetMvc3NewFeatures.GlobalActionFilters</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
   </PropertyGroup>
@@ -57,33 +57,16 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChartResult.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ImageController.cs" />
-    <Compile Include="Controllers\ImageWorkshopController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\ChartModel.cs" />
-    <Compile Include="MyControllerFactory.cs" />
+    <Compile Include="MyActionFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebImageResult.cs" />
+    <Compile Include="StopwatchAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="images\bunny-peanuts.jpg" />
-    <Content Include="images\watermark.png" />
-    <Content Include="Views\ImageWorkshop\Index.aspx" />
-    <Content Include="Views\Image\Cropped.aspx" />
-    <Content Include="Views\Image\HorizontalFlip.aspx" />
-    <Content Include="Views\Image\ImageWatermark.aspx" />
-    <Content Include="Views\Image\Index.aspx" />
-    <Content Include="Views\Image\Resized.aspx" />
-    <Content Include="Views\Image\RotateLeft.aspx" />
-    <Content Include="Views\Image\RotateRight.aspx" />
-    <Content Include="Views\Image\TextWatermark.aspx" />
-    <Content Include="Views\Image\VerticalFlip.aspx" />
-    <Content Include="Views\Shared\ImagesMenu.ascx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -92,22 +75,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\jquery-1.4.1.js" />
-    <Content Include="Scripts\jquery-1.4.1.min.js" />
-    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
-    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
-    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\MicrosoftAjax.js" />
-    <Content Include="Scripts\MicrosoftAjax.debug.js" />
-    <Content Include="Scripts\MicrosoftMvcAjax.js" />
-    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
-    <Content Include="Scripts\MicrosoftMvcValidation.js" />
-    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
     <Content Include="Views\Home\About.aspx" />
     <Content Include="Views\Home\Index.aspx" />
     <Content Include="Views\Shared\Error.aspx" />
@@ -134,7 +101,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>13664</DevelopmentServerPort>
+          <DevelopmentServerPort>16189</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

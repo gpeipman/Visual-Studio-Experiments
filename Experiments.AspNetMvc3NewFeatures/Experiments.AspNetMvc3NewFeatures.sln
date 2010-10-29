@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Experiments.AspNetMvc3NewFe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Experiments.AspNetMvc3NewFeatures.Aspx.Tests", "Experiments.AspNetMvc3NewFeatures.Aspx.Tests\Experiments.AspNetMvc3NewFeatures.Aspx.Tests.csproj", "{43578DF4-E69B-4858-B804-706685FA71DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Experiments.AspNetMvc3NewFeatures.GlobalActionFilters", "Experiments.AspNetMvc3NewFeatures.GlobalActionFilters\Experiments.AspNetMvc3NewFeatures.GlobalActionFilters.csproj", "{C8FCFB93-99F3-4EC0-AAA0-584322F40D21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{43578DF4-E69B-4858-B804-706685FA71DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43578DF4-E69B-4858-B804-706685FA71DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43578DF4-E69B-4858-B804-706685FA71DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8FCFB93-99F3-4EC0-AAA0-584322F40D21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8FCFB93-99F3-4EC0-AAA0-584322F40D21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8FCFB93-99F3-4EC0-AAA0-584322F40D21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8FCFB93-99F3-4EC0-AAA0-584322F40D21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

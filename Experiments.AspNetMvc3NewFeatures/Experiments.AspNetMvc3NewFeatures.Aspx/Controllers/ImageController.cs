@@ -5,13 +5,28 @@ namespace Experiments.AspNetMvc3NewFeatures.Aspx.Controllers
 {
     public class ImageController : Controller
     {
+        private string _imagePath;
+
         public string ImagePath
         {
             get
             {
-                var server = ControllerContext.HttpContext.Server;
-                var imagePath = server.MapPath("~/images/bunny-peanuts.jpg");
-                return imagePath;
+                if (!string.IsNullOrWhiteSpace(_imagePath))
+                    return _imagePath;
+
+                if (ControllerContext == null)
+                    return null;
+
+                var context = ControllerContext.HttpContext;
+                if (context == null)
+                    return null;
+
+                var server = context.Server;
+                if (server == null)
+                    return string.Empty;
+
+                _imagePath = server.MapPath("~/images/bunny-peanuts.jpg");
+                return _imagePath;
             }
         }
 
@@ -31,11 +46,13 @@ namespace Experiments.AspNetMvc3NewFeatures.Aspx.Controllers
             return View();
         }
 
-        public void GetCropped()
+        public WebImageResult GetCropped()
         {
-            new WebImage(ImagePath)
-                .Crop(50, 50, 50, 50) // crop 50px from all sides
-                .Write();
+            var result = new WebImageResult(
+                new WebImage(ImagePath)
+                    .Crop(50, 50, 50, 50)
+            );
+            return result;
         }
 
         public ActionResult HorizontalFlip()
