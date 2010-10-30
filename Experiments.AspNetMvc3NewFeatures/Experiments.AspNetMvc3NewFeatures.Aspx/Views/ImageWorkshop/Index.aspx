@@ -11,10 +11,15 @@
             var query = '';
 
             if ($('#HorizontalFlip').is(':checked'))
-                query += '&horizontalFlip=1';
+                query += '&HorizontalFlip=1';
+            if ($('#VerticalFlip').is(':checked'))
+                query += '&VerticalFlip=1';
+            if ($('#RotateLeft').is(':checked'))
+                query += '&RotateLeft=1';
+            if ($('#RotateRight').is(':checked'))
+                query += '&RotateRight=1';
 
             req += query.substr(1);
-
             $('#image').attr("src", req);
         }
     </script>
@@ -31,6 +36,12 @@
         </tr>
         <tr>
         <td valign="middle"><input type="checkbox" id="VerticalFlip" value="true" />  Flip vertically</td>
+        </tr>
+        <tr>
+        <td valign="middle"><input type="checkbox" id="RotateLeft" value="true" />  Rotate left</td>
+        </tr>
+        <tr>
+        <td valign="middle"><input type="checkbox" id="RotateRight" value="true" />  Rotate right</td>
         </tr>
         <tr>
         <td><input type="button" value="Preview" onclick="updateImage()" /></td>
