@@ -1,0 +1,204 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+    <Schema Namespace="TwitpicOData.Model.Entities" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+      <EntityType Name="Comment">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.String" Nullable="false" />
+        <Property Name="Message" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="UserId" Type="Edm.Int32" Nullable="false" />
+        <NavigationProperty Name="User" Relationship="TwitpicOData.Model.Entities.Comment_User" FromRole="Comment" ToRole="User" />
+        <NavigationProperty Name="Image" Relationship="TwitpicOData.Model.Entities.Comment_Image" FromRole="Comment" ToRole="Image" />
+        <Property Name="Timestamp" Type="Edm.DateTime" Nullable="false" ConcurrencyMode="Fixed" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="false" />
+      </EntityType>
+      <EntityType Name="Event">
+        <Key>
+          <PropertyRef Name="ShortId" />
+        </Key>
+        <Property Name="ShortId" Type="Edm.String" Nullable="false" />
+        <Property Name="UserId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Description" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationSummary" m:FC_ContentKind="text" m:FC_KeepInContent="false" />
+        <Property Name="Trigger" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Images" Relationship="TwitpicOData.Model.Entities.Event_Images" FromRole="Event" ToRole="Images" />
+        <Property Name="Id" Type="Edm.String" Nullable="true" />
+        <Property Name="Timestamp" Type="Edm.DateTime" Nullable="false" ConcurrencyMode="Fixed" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="false" />
+      </EntityType>
+      <EntityType Name="Image" m:HasStream="true">
+        <Key>
+          <PropertyRef Name="ShortId" />
+        </Key>
+        <Property Name="ShortId" Type="Edm.String" Nullable="false" />
+        <Property Name="UserId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Source" Type="Edm.String" Nullable="true" />
+        <Property Name="Message" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Views" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Width" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Height" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Size" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Type" Type="Edm.String" Nullable="true" />
+        <Property Name="StatusId" Type="Edm.Int64" Nullable="true" />
+        <Property Name="InReplyToStatusId" Type="Edm.Int64" Nullable="true" />
+        <Property Name="InReplyToUserId" Type="Edm.Int64" Nullable="true" />
+        <Property Name="Location" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="User" Relationship="TwitpicOData.Model.Entities.Image_User" FromRole="Image" ToRole="User" />
+        <NavigationProperty Name="Events" Relationship="TwitpicOData.Model.Entities.Image_Events" FromRole="Image" ToRole="Events" />
+        <NavigationProperty Name="Comments" Relationship="TwitpicOData.Model.Entities.Image_Comments" FromRole="Image" ToRole="Comments" />
+        <Property Name="Url" Type="Edm.String" Nullable="true" />
+        <Property Name="Description" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationSummary" m:FC_ContentKind="text" m:FC_KeepInContent="false" />
+        <Property Name="Id" Type="Edm.String" Nullable="true" />
+        <Property Name="Timestamp" Type="Edm.DateTime" Nullable="false" ConcurrencyMode="Fixed" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="false" />
+      </EntityType>
+      <EntityType Name="Place">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.String" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="CountryCode" Type="Edm.String" Nullable="true" />
+        <Property Name="Type" Type="Edm.String" Nullable="true" />
+        <Property Name="GeometryType" Type="Edm.String" Nullable="true" />
+        <Property Name="ContainedWithin" Type="Edm.String" Nullable="true" />
+        <NavigationProperty Name="Images" Relationship="TwitpicOData.Model.Entities.Place_Images" FromRole="Place" ToRole="Images" />
+        <Property Name="Timestamp" Type="Edm.DateTime" Nullable="false" ConcurrencyMode="Fixed" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="false" />
+      </EntityType>
+      <EntityType Name="Tag">
+        <Key>
+          <PropertyRef Name="Name" />
+        </Key>
+        <Property Name="Id" Type="Edm.String" Nullable="true" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <NavigationProperty Name="Images" Relationship="TwitpicOData.Model.Entities.Tag_Images" FromRole="Tag" ToRole="Images" />
+        <Property Name="Timestamp" Type="Edm.DateTime" Nullable="false" ConcurrencyMode="Fixed" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="false" />
+      </EntityType>
+      <EntityType Name="User" m:HasStream="true">
+        <Key>
+          <PropertyRef Name="UserName" />
+        </Key>
+        <Property Name="TwitterId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="UserName" Type="Edm.String" Nullable="false" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="Name" Type="Edm.String" Nullable="true" />
+        <Property Name="Location" Type="Edm.String" Nullable="true" />
+        <Property Name="Website" Type="Edm.String" Nullable="true" />
+        <Property Name="Bio" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationSummary" m:FC_ContentKind="text" m:FC_KeepInContent="true" />
+        <Property Name="PhotoCount" Type="Edm.Int64" Nullable="false" />
+        <Property Name="AvatarUrl" Type="Edm.String" Nullable="true" />
+        <Property Name="ProfileBackgroundColor" Type="Edm.String" Nullable="true" />
+        <Property Name="ProfileTextColor" Type="Edm.String" Nullable="true" />
+        <Property Name="ProfileLinkColor" Type="Edm.String" Nullable="true" />
+        <Property Name="ProfileSidebarFillColor" Type="Edm.String" Nullable="true" />
+        <Property Name="ProfileBackgroundImageUrl" Type="Edm.String" Nullable="true" />
+        <Property Name="UtcOffset" Type="Edm.String" Nullable="true" />
+        <Property Name="ProfileBackgroundTile" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="GeoEnabled" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="PublicUpdates" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="PublicTagging" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="Banned" Type="Edm.Boolean" Nullable="false" />
+        <NavigationProperty Name="Events" Relationship="TwitpicOData.Model.Entities.User_Events" FromRole="User" ToRole="Events" />
+        <NavigationProperty Name="Images" Relationship="TwitpicOData.Model.Entities.User_Images" FromRole="User" ToRole="Images" />
+        <NavigationProperty Name="Places" Relationship="TwitpicOData.Model.Entities.User_Places" FromRole="User" ToRole="Places" />
+        <Property Name="Id" Type="Edm.String" Nullable="true" />
+        <Property Name="Timestamp" Type="Edm.DateTime" Nullable="false" ConcurrencyMode="Fixed" m:FC_TargetPath="SyndicationUpdated" m:FC_ContentKind="text" m:FC_KeepInContent="false" />
+      </EntityType>
+      <Association Name="Comment_User">
+        <End Role="Comment" Type="TwitpicOData.Model.Entities.Comment" Multiplicity="*" />
+        <End Role="User" Type="TwitpicOData.Model.Entities.User" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Comment_Image">
+        <End Role="Comment" Type="TwitpicOData.Model.Entities.Comment" Multiplicity="*" />
+        <End Role="Image" Type="TwitpicOData.Model.Entities.Image" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Event_Images">
+        <End Role="Event" Type="TwitpicOData.Model.Entities.Event" Multiplicity="*" />
+        <End Role="Images" Type="TwitpicOData.Model.Entities.Image" Multiplicity="*" />
+      </Association>
+      <Association Name="Image_User">
+        <End Role="Image" Type="TwitpicOData.Model.Entities.Image" Multiplicity="*" />
+        <End Role="User" Type="TwitpicOData.Model.Entities.User" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Image_Events">
+        <End Role="Image" Type="TwitpicOData.Model.Entities.Image" Multiplicity="*" />
+        <End Role="Events" Type="TwitpicOData.Model.Entities.Event" Multiplicity="*" />
+      </Association>
+      <Association Name="Image_Comments">
+        <End Role="Image" Type="TwitpicOData.Model.Entities.Image" Multiplicity="*" />
+        <End Role="Comments" Type="TwitpicOData.Model.Entities.Comment" Multiplicity="*" />
+      </Association>
+      <Association Name="Place_Images">
+        <End Role="Place" Type="TwitpicOData.Model.Entities.Place" Multiplicity="*" />
+        <End Role="Images" Type="TwitpicOData.Model.Entities.Image" Multiplicity="*" />
+      </Association>
+      <Association Name="Tag_Images">
+        <End Role="Tag" Type="TwitpicOData.Model.Entities.Tag" Multiplicity="*" />
+        <End Role="Images" Type="TwitpicOData.Model.Entities.Image" Multiplicity="*" />
+      </Association>
+      <Association Name="User_Events">
+        <End Role="User" Type="TwitpicOData.Model.Entities.User" Multiplicity="*" />
+        <End Role="Events" Type="TwitpicOData.Model.Entities.Event" Multiplicity="*" />
+      </Association>
+      <Association Name="User_Images">
+        <End Role="User" Type="TwitpicOData.Model.Entities.User" Multiplicity="*" />
+        <End Role="Images" Type="TwitpicOData.Model.Entities.Image" Multiplicity="*" />
+      </Association>
+      <Association Name="User_Places">
+        <End Role="User" Type="TwitpicOData.Model.Entities.User" Multiplicity="*" />
+        <End Role="Places" Type="TwitpicOData.Model.Entities.Place" Multiplicity="*" />
+      </Association>
+    </Schema>
+    <Schema Namespace="TwitpicOData.Model" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+      <EntityContainer Name="TwitpicData" m:IsDefaultEntityContainer="true">
+        <EntitySet Name="Comments" EntityType="TwitpicOData.Model.Entities.Comment" />
+        <EntitySet Name="Events" EntityType="TwitpicOData.Model.Entities.Event" />
+        <EntitySet Name="Images" EntityType="TwitpicOData.Model.Entities.Image" />
+        <EntitySet Name="Places" EntityType="TwitpicOData.Model.Entities.Place" />
+        <EntitySet Name="Tags" EntityType="TwitpicOData.Model.Entities.Tag" />
+        <EntitySet Name="Users" EntityType="TwitpicOData.Model.Entities.User" />
+        <AssociationSet Name="Comment_User" Association="TwitpicOData.Model.Entities.Comment_User">
+          <End Role="Comment" EntitySet="Comments" />
+          <End Role="User" EntitySet="Users" />
+        </AssociationSet>
+        <AssociationSet Name="Comment_Image" Association="TwitpicOData.Model.Entities.Comment_Image">
+          <End Role="Comment" EntitySet="Comments" />
+          <End Role="Image" EntitySet="Images" />
+        </AssociationSet>
+        <AssociationSet Name="Event_Images" Association="TwitpicOData.Model.Entities.Event_Images">
+          <End Role="Event" EntitySet="Events" />
+          <End Role="Images" EntitySet="Images" />
+        </AssociationSet>
+        <AssociationSet Name="Image_User" Association="TwitpicOData.Model.Entities.Image_User">
+          <End Role="Image" EntitySet="Images" />
+          <End Role="User" EntitySet="Users" />
+        </AssociationSet>
+        <AssociationSet Name="Image_Events" Association="TwitpicOData.Model.Entities.Image_Events">
+          <End Role="Image" EntitySet="Images" />
+          <End Role="Events" EntitySet="Events" />
+        </AssociationSet>
+        <AssociationSet Name="Image_Comments" Association="TwitpicOData.Model.Entities.Image_Comments">
+          <End Role="Image" EntitySet="Images" />
+          <End Role="Comments" EntitySet="Comments" />
+        </AssociationSet>
+        <AssociationSet Name="Place_Images" Association="TwitpicOData.Model.Entities.Place_Images">
+          <End Role="Place" EntitySet="Places" />
+          <End Role="Images" EntitySet="Images" />
+        </AssociationSet>
+        <AssociationSet Name="Tag_Images" Association="TwitpicOData.Model.Entities.Tag_Images">
+          <End Role="Tag" EntitySet="Tags" />
+          <End Role="Images" EntitySet="Images" />
+        </AssociationSet>
+        <AssociationSet Name="User_Events" Association="TwitpicOData.Model.Entities.User_Events">
+          <End Role="User" EntitySet="Users" />
+          <End Role="Events" EntitySet="Events" />
+        </AssociationSet>
+        <AssociationSet Name="User_Images" Association="TwitpicOData.Model.Entities.User_Images">
+          <End Role="User" EntitySet="Users" />
+          <End Role="Images" EntitySet="Images" />
+        </AssociationSet>
+        <AssociationSet Name="User_Places" Association="TwitpicOData.Model.Entities.User_Places">
+          <End Role="User" EntitySet="Users" />
+          <End Role="Places" EntitySet="Places" />
+        </AssociationSet>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

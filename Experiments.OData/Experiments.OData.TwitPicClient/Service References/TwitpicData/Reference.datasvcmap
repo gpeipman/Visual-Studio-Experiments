@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7e0ce907-b303-44cd-b30b-a94f01734ee8" xmlns="urn:schemas-microsoft-com:xml-dataservicemap">
+  <MetadataSources>
+    <MetadataSource Address="http://odata.twitpic.com/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.edmx" MetadataType="Edmx" ID="71666487-074a-4c1c-bcda-1fb196c84943" SourceId="1" SourceUrl="http://odata.twitpic.com/" />
+  </Metadata>
+  <Extensions />
+</ReferenceGroup>
