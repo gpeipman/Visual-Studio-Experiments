@@ -26,10 +26,12 @@ namespace Experiments.OData.TwitPicClient
                           select i;
 
             if (!string.IsNullOrWhiteSpace(filterField.Text))
+            {
+                var searchString = filterField.Text.ToLower();
                 images = from i in images
-                         where i.Message.ToLower().Contains(filterField.Text.ToLower())
+                         where i.Message.ToLower().Contains(searchString)
                          select i;
-
+            }
             images = images.OrderByDescending(i => i.Timestamp);
 
             picsByLabel.Text = user;
