@@ -2,14 +2,16 @@
 using System.Web.Mvc;
 using Experiments.AspNetMvc3NewFeatures.Aspx.Controllers;
 using Experiments.AspNetMvc3NewFeatures.Aspx.Models;
+using System.Web.SessionState;
+using System.Web.Routing;
 
 namespace Experiments.AspNetMvc3NewFeatures.Aspx
 {
     public class MyControllerFactory : IControllerFactory
     {
-        public IController CreateController(System.Web.Routing.RequestContext requestContext, string controllerName)
+        public IController CreateController(RequestContext requestContext, string controllerName)
         {
-            IController controller = null;
+            IController controller;
 
             if (controllerName == "favicon.ico")
                 return null;
@@ -37,6 +39,11 @@ namespace Experiments.AspNetMvc3NewFeatures.Aspx
             {
                 (controller as IDisposable).Dispose();
             }
+        }
+
+        public SessionStateBehavior GetControllerSessionBehavior(RequestContext requestContext, string controllerName)
+        {
+            return SessionStateBehavior.Default;
         }
     }
 }

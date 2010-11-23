@@ -10,8 +10,8 @@ namespace Experiments.AspNetMvc3NewFeatures.GlobalActionFilters
 
             var response = filterContext.RequestContext.HttpContext.Response;
             
-            //response.Write("<!-- Buuu! -->");  // Works for Cassini and IIS
-            response.Headers.Add("MyActionFilter", "Buuu!"); // Works for IIS only
+            response.Write("<!-- Buuu! -->");  // Works for Cassini and IIS
+            //response.Headers.Add("MyActionFilter", "Buuu!"); // Works for IIS only
         }
     }
 }
