@@ -18,7 +18,6 @@
     </system.web>
   </location>
   <system.web>
-    <authentication mode="None" />
     <authorization>
       <deny users="?" />
     </authorization>
@@ -27,8 +26,7 @@
         <add assembly="Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
       </assemblies>
     </compilation>
-    <!--Commented out by FedUtil-->
-    <!--<authentication mode="Forms"><forms loginUrl="~/Account/Login.aspx" timeout="2880" /></authentication>-->
+    <authentication mode="Forms"><forms loginUrl="~/Account/Login.aspx" timeout="2880" /></authentication>
     <membership>
       <providers>
         <clear />
@@ -48,7 +46,6 @@
         <add name="AspNetWindowsTokenRoleProvider" type="System.Web.Security.WindowsTokenRoleProvider" applicationName="/" />
       </providers>
     </roleManager>
-    <httpRuntime requestValidationMode="2.0" />
   </system.web>
   <system.webServer>
     <modules runAllManagedModulesForAllRequests="true">
@@ -56,32 +53,4 @@
       <add name="SessionAuthenticationModule" type="Microsoft.IdentityModel.Web.SessionAuthenticationModule, Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" preCondition="managedHandler" />
     </modules>
   </system.webServer>
-  <appSettings>
-    <add key="FederationMetadataLocation" value="C:\git\Visual-Studio-Experiments\Experiments.WIF\WIFControlsApp_STS\FederationMetadata\2007-06\FederationMetadata.xml" />
-  </appSettings>
-  <microsoft.identityModel>
-    <service>
-      <applicationService>
-        <claimTypeRequired>
-          <!--Following are the claims offered by STS 'http://localhost:2905/WIFControlsApp_STS/'. Add or uncomment claims that you require by your application and then update the federation metadata of this application.-->
-          <claimType type="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name" optional="true" />
-          <claimType type="http://schemas.microsoft.com/ws/2008/06/identity/claims/role" optional="true" />
-          <!--Following are the claims offered by STS 'http://localhost:1149/WIFControlsApp_STS/'. Add or uncomment claims that you require by your application and then update the federation metadata of this application.-->
-        </claimTypeRequired>
-      </applicationService>
-      <audienceUris>
-        <add value="http://localhost/wifdemo" />
-        <add value="http://localhost:8080/wifdemo" />
-      </audienceUris>
-      <federatedAuthentication>
-        <wsFederation passiveRedirectEnabled="true" issuer="http://localhost:1149/WIFControlsApp_STS/" realm="http://localhost:8080/wifdemo" requireHttps="false" />
-        <cookieHandler requireSsl="false" />
-      </federatedAuthentication>
-      <issuerNameRegistry type="Microsoft.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry, Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
-        <trustedIssuers>
-          <add thumbprint="1BC632696DB5D68BAD93A046C8F2CF3F0300E0B3" name="http://localhost:2905/WIFControlsApp_STS/" />
-        </trustedIssuers>
-      </issuerNameRegistry>
-    </service>
-  </microsoft.identityModel>
 </configuration>
