@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WIFControlsApp", "WIFControlsApp\WIFControlsApp.csproj", "{1C57EB1E-D5F4-429F-BB3A-7AD5ED8CA248}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WIFControlsApp_STS", "WIFControlsApp_STS\", "{95B8EF41-8570-4F4F-A635-92405A1744D7}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WIFControlsApp_STS", "WIFControlsApp_STS\", "{FBFD0B8D-E339-40F7-A80A-23131904319F}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		Debug.AspNetCompiler.VirtualPath = "/WIFControlsApp_STS"
@@ -20,7 +20,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WIFControlsApp_STS", "WIFCo
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "1149"
+		VWDPort = "1190"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
@@ -34,10 +34,10 @@ Global
 		{1C57EB1E-D5F4-429F-BB3A-7AD5ED8CA248}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C57EB1E-D5F4-429F-BB3A-7AD5ED8CA248}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C57EB1E-D5F4-429F-BB3A-7AD5ED8CA248}.Release|Any CPU.Build.0 = Release|Any CPU
-		{95B8EF41-8570-4F4F-A635-92405A1744D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{95B8EF41-8570-4F4F-A635-92405A1744D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{95B8EF41-8570-4F4F-A635-92405A1744D7}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{95B8EF41-8570-4F4F-A635-92405A1744D7}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{FBFD0B8D-E339-40F7-A80A-23131904319F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBFD0B8D-E339-40F7-A80A-23131904319F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBFD0B8D-E339-40F7-A80A-23131904319F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBFD0B8D-E339-40F7-A80A-23131904319F}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
