@@ -133,7 +133,8 @@ namespace Microsoft.Samples.DPE.Identity.Controls
             HtmlTableRow row;
 
             AddTableSectionHeader(table, Resources.IssuedIdentity, "((IClaimsPrincipal)Thread.CurrentPrincipal).Identities[0].Claims");
-            AddColumnHeadersToTable(table, new[] { Resources.ClaimTypeColumnHeader, Resources.ClaimValueColumnHeader, Resources.ClaimIssuerColumnHeader, Resources.ClaimOriginalIssuerColumnHeader });
+            //AddColumnHeadersToTable(table, new[] { Resources.ClaimTypeColumnHeader, Resources.ClaimValueColumnHeader, Resources.ClaimIssuerColumnHeader, Resources.ClaimOriginalIssuerColumnHeader });
+            AddColumnHeadersToTable(table, new[] { Resources.ClaimTypeColumnHeader, Resources.ClaimValueColumnHeader, Resources.ClaimIssuerColumnHeader });
 
             IClaimsPrincipal principal = (IClaimsPrincipal)Thread.CurrentPrincipal;
             foreach (Claim claim in principal.Identities[0].Claims)
@@ -143,7 +144,7 @@ namespace Microsoft.Samples.DPE.Identity.Controls
                 row.Cells.Add(new HtmlTableCell { InnerText = claim.ClaimType });
                 row.Cells.Add(new HtmlTableCell { InnerText = claim.Value });
                 row.Cells.Add(new HtmlTableCell { InnerText = claim.Issuer });
-                row.Cells.Add(new HtmlTableCell { InnerText = claim.OriginalIssuer });
+                //row.Cells.Add(new HtmlTableCell { InnerText = claim.OriginalIssuer });
 
                 table.Rows.Add(row);
             }

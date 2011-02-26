@@ -1,0 +1,71 @@
+﻿<?xml version="1.0"?>
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+<configuration>
+  <configSections>
+    <section name="microsoft.identityModel" type="Microsoft.IdentityModel.Configuration.MicrosoftIdentityModelSection, Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+  </configSections>
+  <connectionStrings>
+    <add name="ApplicationServices" connectionString="data source=.\SQLEXPRESS;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\aspnetdb.mdf;User Instance=true" providerName="System.Data.SqlClient" />
+  </connectionStrings>
+  <location path="FederationMetadata">
+    <system.web>
+      <authorization>
+        <allow users="?" />
+      </authorization>
+    </system.web>
+  </location>
+  <location path="Secure">
+    <system.web>      
+      <authorization>
+        <deny users="?" />
+      </authorization>
+    </system.web>
+  </location>
+  <system.web>
+    <authentication mode="None" />
+    <compilation debug="true" targetFramework="4.0">
+      <assemblies>
+        <add assembly="Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+      </assemblies>
+    </compilation>
+    <!--Commented out by FedUtil-->
+    <!--<authentication mode="Forms"><forms loginUrl="~/Account/Login.aspx" timeout="2880" /></authentication>-->
+    <httpRuntime requestValidationMode="2.0" />
+  </system.web>
+  <system.webServer>
+    <modules runAllManagedModulesForAllRequests="true">
+      <add name="WSFederationAuthenticationModule" type="Microsoft.IdentityModel.Web.WSFederationAuthenticationModule, Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" preCondition="managedHandler" />
+      <add name="SessionAuthenticationModule" type="Microsoft.IdentityModel.Web.SessionAuthenticationModule, Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" preCondition="managedHandler" />
+    </modules>
+  </system.webServer>
+  <appSettings>
+    <add key="FederationMetadataLocation" value="C:\git\Visual-Studio-Experiments\Experiments.WIF\WIFControlsApp_STS\FederationMetadata\2007-06\FederationMetadata.xml" />
+  </appSettings>
+  <microsoft.identityModel>
+    <service saveBootstrapTokens="true">
+      <audienceUris>
+        <add value="http://localhost:8080/wifcontrolsapp/secure/" />
+      </audienceUris>
+      <applicationService>
+        <claimTypeRequired>
+          <!--Following are the claims offered by STS 'http://localhost:1159/WIFControlsApp_STS1/'. Add or uncomment claims that you require by your application and then update the federation metadata of this application.-->
+          <claimType type="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name" optional="true" />
+          <claimType type="http://schemas.microsoft.com/ws/2008/06/identity/claims/role" optional="true" />
+          <!--Following are the claims offered by STS 'http://localhost:1190/WIFControlsApp_STS/'. Add or uncomment claims that you require by your application and then update the federation metadata of this application.-->
+        </claimTypeRequired>
+      </applicationService>
+      <federatedAuthentication>
+        <wsFederation passiveRedirectEnabled="true" issuer="http://localhost:1190/WIFControlsApp_STS/" realm="http://localhost:8080/wifcontrolsapp/" requireHttps="false" />
+        <cookieHandler requireSsl="false" />
+      </federatedAuthentication>
+      <issuerNameRegistry type="Microsoft.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry, Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+        <trustedIssuers>
+          <add thumbprint="1BC632696DB5D68BAD93A046C8F2CF3F0300E0B3" name="http://localhost:1159/WIFControlsApp_STS1/" />
+        </trustedIssuers>
+      </issuerNameRegistry>
+    </service>
+  </microsoft.identityModel>
+</configuration>
