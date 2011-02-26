@@ -24,6 +24,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WIFControlsApp_STS", "WIFCo
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Samples.DPE.Identity.Controls", "Microsoft.Samples.DPE.Identity.Controls\Microsoft.Samples.DPE.Identity.Controls.csproj", "{FA56BEC3-5483-4C6A-B012-ABAC12018B6F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{FBFD0B8D-E339-40F7-A80A-23131904319F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBFD0B8D-E339-40F7-A80A-23131904319F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{FBFD0B8D-E339-40F7-A80A-23131904319F}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{FA56BEC3-5483-4C6A-B012-ABAC12018B6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA56BEC3-5483-4C6A-B012-ABAC12018B6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA56BEC3-5483-4C6A-B012-ABAC12018B6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA56BEC3-5483-4C6A-B012-ABAC12018B6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

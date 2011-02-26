@@ -7,18 +7,14 @@
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <h2>
-        Welcome to ASP.NET!
+        
     </h2>
     <p>
         To learn more about ASP.NET visit <a href="http://www.asp.net" title="ASP.NET Website">www.asp.net</a>.
-        <wif:FederatedPassiveSignIn ID="FederatedPassiveSignIn1" runat="server" 
-            HomeRealm="http://localhost:8080/wifcontrolsapp/" 
-            Issuer="http://localhost:1190/WIFControlsApp_STS/" 
-            Realm="http://localhost:8080/wifcontrolsapp/" RequireHttps="False">
+        <wif:FederatedPassiveSignIn ID="FederatedPassiveSignIn1" runat="server" RequireHttps="False" 
+            VisibleWhenSignedIn="False" 
+            UseFederationPropertiesFromConfiguration="True" 
+            DestinationPageUrl="~/Secure/" ErrorAction="RedirectToLoginPage">
         </wif:FederatedPassiveSignIn>
-    </p>
-    <p>
-        You can also find <a href="http://go.microsoft.com/fwlink/?LinkID=152368&amp;clcid=0x409"
-            title="MSDN ASP.NET Docs">documentation on ASP.NET at MSDN</a>.
     </p>
 </asp:Content>
