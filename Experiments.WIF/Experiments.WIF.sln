@@ -28,6 +28,48 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Samples.DPE.Ident
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSTSApp", "RSTSApp\RSTSApp.csproj", "{786ABF06-D656-4426-8065-0746A61C5F59}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "RSTSApp_STS", "RSTSApp_STS\", "{2E8EF135-A61D-438D-8F76-990691BBC4C2}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/RSTSApp_STS"
+		Debug.AspNetCompiler.PhysicalPath = "RSTSApp_STS\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\RSTSApp_STS\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/RSTSApp_STS"
+		Release.AspNetCompiler.PhysicalPath = "RSTSApp_STS\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\RSTSApp_STS\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "2742"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "RSTSApp_STS_STS", "RSTSApp_STS_STS\", "{75BBA12E-6B0E-40F5-966F-1F02C216DD37}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/RSTSApp_STS_STS"
+		Debug.AspNetCompiler.PhysicalPath = "RSTSApp_STS_STS\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\RSTSApp_STS_STS\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/RSTSApp_STS_STS"
+		Release.AspNetCompiler.PhysicalPath = "RSTSApp_STS_STS\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\RSTSApp_STS_STS\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "2744"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +92,14 @@ Global
 		{786ABF06-D656-4426-8065-0746A61C5F59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{786ABF06-D656-4426-8065-0746A61C5F59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{786ABF06-D656-4426-8065-0746A61C5F59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E8EF135-A61D-438D-8F76-990691BBC4C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E8EF135-A61D-438D-8F76-990691BBC4C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E8EF135-A61D-438D-8F76-990691BBC4C2}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E8EF135-A61D-438D-8F76-990691BBC4C2}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{75BBA12E-6B0E-40F5-966F-1F02C216DD37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75BBA12E-6B0E-40F5-966F-1F02C216DD37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75BBA12E-6B0E-40F5-966F-1F02C216DD37}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{75BBA12E-6B0E-40F5-966F-1F02C216DD37}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
