@@ -131,15 +131,17 @@ public class CustomSecurityTokenService : SecurityTokenService
             throw new ArgumentNullException( "principal" );
         }
 
-        ClaimsIdentity outputIdentity = new ClaimsIdentity();
+        ClaimsIdentity outputIdentity = (ClaimsIdentity)principal.Identity;
 
         // Issue custom claims.
         // TODO: Change the claims below to issue custom claims required by your application.
         // Update the application's configuration file too to reflect new claims requirement.
 
-        outputIdentity.Claims.Add( new Claim( System.IdentityModel.Claims.ClaimTypes.Name, principal.Identity.Name ) );
-        outputIdentity.Claims.Add( new Claim( ClaimTypes.Role, "Manager" ) );
-
+        // Gunnar: my custom claim
+        outputIdentity.Claims.Add(new Claim(ClaimTypes.Email, "carter@hotmail.com"));
+        outputIdentity.Claims.Add(new Claim(ClaimTypes.Gender, "Male"));
+        outputIdentity.Claims.Add(new Claim(ClaimTypes.HomePhone, "12345"));
+        outputIdentity.Claims.Add(new Claim(ClaimTypes.Webpage, "carter.was.here"));
         return outputIdentity;
     }
 }
