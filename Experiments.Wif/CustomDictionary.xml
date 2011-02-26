@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Dictionary>
+    <Words>
+        <Recognized>
+            <Word>Visualizer</Word>
+            <Word>Visualizers</Word>
+            <Word>Saml</Word>
+        </Recognized>
+    </Words>
+    <Acronyms>
+        <CasingExceptions>
+            <Acronym>DPE</Acronym>
+        </CasingExceptions>
+    </Acronyms>
+</Dictionary>

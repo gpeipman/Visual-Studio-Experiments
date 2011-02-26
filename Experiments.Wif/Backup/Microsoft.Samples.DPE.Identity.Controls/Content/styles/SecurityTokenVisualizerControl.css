@@ -1,0 +1,114 @@
+﻿.TokenVisualizerTableContainerRounded
+{
+    padding-top: 5px;
+    max-width:1680px;
+}
+
+.TokenVisualizerTable
+{
+    border-right: black 1px solid;
+    border-top: black 1px solid;
+    
+    border-collapse: collapse;
+    table-layout:fixed;
+}
+
+.TokenVisualizerTable TD
+{
+    border-top: black 1px inset;
+    padding-left: 5px;
+    border-left: black 1px inset;
+    padding-top: 1px;
+    border-right: black 1px inset;
+    border-bottom: black 1px inset;
+    word-wrap: break-word;
+}
+
+.NotAuthenticatedUser
+{
+    font-weight: bold;
+    background: #d8d8d8;
+}
+
+.TokenVisualizerColumnHeader
+{
+    font-weight: bold;
+    background-color: #d8d8d8;
+}
+
+.ClaimsSectionTitle
+{
+    font-weight: bold;
+    background: black;
+    color: white;
+}
+
+.TokenVisualizerImage
+{
+    margin: 0px 5px 0px 0px;
+}
+
+.TokenVisualizerTitle
+{
+    cursor: pointer;
+}
+
+.SAMLToken
+{
+    width: 650px;
+    height: 250px;
+}
+
+.corner-top-left, .corner-top-right
+{
+    /*background-image: url(<%=WebResource("Microsoft.Samples.DPE.Identity.Controls.icon.png")%>);*/
+    height: 9px;
+    font-size: 2px;
+}
+
+.corner-bottom-left, .corner-bottom-right
+{
+    /*background-image: url(<%=WebResource("Microsoft.Samples.DPE.Identity.Controls.cornerroundedtransp.gif")%>);*/
+    height: 9px;
+    font-size: 2px;
+}
+
+.corner-top-left, .corner-bottom-left
+{
+    margin-right: 9px;
+}
+
+.corner-top-right, .corner-bottom-right
+{
+    margin-left: 9px;
+    margin-top: -9px;
+}
+
+.corner-top-right
+{
+    background-position: 100% 0;
+}
+
+.corner-bottom-left
+{
+    background-position: 0 -9px;
+}
+
+.corner-bottom-right
+{
+    background-position: 100% -9px;
+}
+
+.lateralBorders
+{
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    color: #000000;
+}
+
+.containerControl
+{
+    margin-left: 10px;
+    margin-right:10px;
+}
+
