@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExternalLibraries", "Extern
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPNET.MVP.Tests", "ASPNET.MVP.Tests\ASPNET.MVP.Tests.csproj", "{B81B3856-DBD0-442F-AADD-E98AD1E4FE91}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Experiments.APSNET.MVP.Presentation", "Experiments.APSNET.MVP.Presentation\Experiments.APSNET.MVP.Presentation.csproj", "{D03C47DF-404F-4E12-B6A2-221022CB20D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 		{B81B3856-DBD0-442F-AADD-E98AD1E4FE91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B81B3856-DBD0-442F-AADD-E98AD1E4FE91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B81B3856-DBD0-442F-AADD-E98AD1E4FE91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D03C47DF-404F-4E12-B6A2-221022CB20D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D03C47DF-404F-4E12-B6A2-221022CB20D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D03C47DF-404F-4E12-B6A2-221022CB20D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D03C47DF-404F-4E12-B6A2-221022CB20D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
