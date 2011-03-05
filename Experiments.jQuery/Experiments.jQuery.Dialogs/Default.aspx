@@ -9,11 +9,7 @@
     </h2>
     <p>
         <ul>
-            <li><a href="MultiSelectTree.aspx">MultiSelectTree</a></li>
+            <li><a href="SelectTree.aspx">SelectTree</a></li>
         </ul>
-    </p>
-    <p>
-        You can also find <a href="http://go.microsoft.com/fwlink/?LinkID=152368&amp;clcid=0x409"
-            title="MSDN ASP.NET Docs">documentation on ASP.NET at MSDN</a>.
     </p>
 </asp:Content>
